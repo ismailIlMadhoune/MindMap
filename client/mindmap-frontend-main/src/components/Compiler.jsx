@@ -9,7 +9,7 @@ const Compiler = () => {
 
   const handleCompile = async () => {
     try {
-      const response = await axios.post('http://localhost:5002/api/execute', {
+      const response = await axios.post('https://mindmap-backend-render.onrender.com/', {
         clientId: 'ad44c5a46f0cae10e0e5c069f3f95647',
         clientSecret: '22a95ec5a7b1e0298843aa538f19e6b4f341ddccc210de92d15837004dd675f',
         script: code,
