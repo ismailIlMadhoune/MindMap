@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/mindmap-backend-0.0.1-SNAPSHOT.jar mindmap-backend.jar
 EXPOSE 5002
-ENTRYPOINT ["java","-jar","demo.jar"]
+ENTRYPOINT ["java","-jar","mindmap-backend.jar"]
