@@ -9,9 +9,9 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**")  // Allow CORS for /api/ endpoints
-                .allowedOrigins("http://localhost:5173", "https://mindsketch.netlify.app/")  // Frontend origins
-                .allowedMethods("GET", "POST", "PUT", "DELETE")  // Allowed HTTP methods
+        registry.addMapping("/**")  // Allow CORS for all endpoints
+                .allowedOrigins("http://localhost:5173", "https://mindsketch.netlify.app/")  // Frontend origin
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")  // Allowed HTTP methods
                 .allowedHeaders("*")  // Allow all headers
                 .allowCredentials(true);  // Allow cookies if needed
     }
