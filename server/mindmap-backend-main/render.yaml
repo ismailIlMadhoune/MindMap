@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mindmap-backend
+    runtime: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: JAVA_HOME
+        value: /opt/java/openjdk
