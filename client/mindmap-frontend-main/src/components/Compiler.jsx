@@ -7,11 +7,16 @@ const Compiler = () => {
   const [language, setLanguage] = useState('java');
   const [output, setOutput] = useState('');
 
+  // Use Vite's `import.meta.env` for environment variables
+  const API_URL = import.meta.env.VITE_API_URL || 'https://your-render-backend-url.onrender.com';
+  const clientId = import.meta.env.VITE_JDOODLE_CLIENT_ID || 'defaultClientId';
+  const clientSecret = import.meta.env.VITE_JDOODLE_CLIENT_SECRET || 'defaultClientSecret';
+  
   const handleCompile = async () => {
     try {
-      const response = await axios.post('http://localhost:5002/api/execute', {
-        clientId: 'ad44c5a46f0cae10e0e5c069f3f95647',
-        clientSecret: '22a95ec5a7b1e0298843aa538f19e6b4f341ddccc210de92d15837004dd675f',
+      const response = await axios.post(`${API_URL}/api/execute`, {
+        clientId: clientId,
+        clientSecret: clientSecret,
         script: code,
         language: language,
       });
@@ -26,12 +31,12 @@ const Compiler = () => {
   return (
     <div>
       <h1>Code Compiler</h1>
-      
-      {/* Pass language prop to CodeEditor */}
+
+      {/* Code Editor */}
       <CodeEditor 
         setCode={setCode} 
         code={code} 
-        language={language}  // Add this line
+        language={language} 
       />
 
       <div>
