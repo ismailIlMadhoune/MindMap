@@ -6,12 +6,16 @@ const Compiler = () => {
   const [code, setCode] = useState('');
   const [language, setLanguage] = useState('java');
   const [output, setOutput] = useState('');
+  const [useRemote, setUseRemote] = useState(true); // Toggle between local and remote
 
-  // Use Vite's `import.meta.env` for environment variables
-  const API_URL = import.meta.env.VITE_API_URL || 'https://your-render-backend-url.onrender.com';
-  const clientId = import.meta.env.VITE_JDOODLE_CLIENT_ID || 'defaultClientId';
-  const clientSecret = import.meta.env.VITE_JDOODLE_CLIENT_SECRET || 'defaultClientSecret';
-  
+  // Backend URLs
+  const localURL = 'http://localhost:5002';
+  const remoteURL = 'https://mindmap-backend-44bg.onrender.com';
+  const API_URL = useRemote ? remoteURL : localURL;
+
+  const clientId = 'yourClientId'; // Replace with your client ID
+  const clientSecret = 'yourClientSecret'; // Replace with your client secret
+
   const handleCompile = async () => {
     try {
       const response = await axios.post(`${API_URL}/api/execute`, {
@@ -31,6 +35,18 @@ const Compiler = () => {
   return (
     <div>
       <h1>Code Compiler</h1>
+
+      {/* Backend Toggle */}
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={useRemote}
+            onChange={() => setUseRemote(!useRemote)}
+          />
+          Use Remote Backend ({useRemote ? 'Remote' : 'Local'})
+        </label>
+      </div>
 
       {/* Code Editor */}
       <CodeEditor 
