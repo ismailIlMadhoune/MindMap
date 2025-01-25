@@ -18,6 +18,13 @@ const Compiler = () => {
 
   const handleCompile = async () => {
     try {
+      console.log('Sending Payload:', {
+        clientId,
+        clientSecret,
+        script: code,
+        language,
+      });
+
       const response = await axios.post(`${API_URL}/api/execute`, {
         clientId: clientId,
         clientSecret: clientSecret,
@@ -25,10 +32,24 @@ const Compiler = () => {
         language: language,
       });
 
-      setOutput(response.data.output || response.data.error);
+      console.log('Received Response:', response.data);
+
+      if (response.data.output || response.data.error) {
+        setOutput(response.data.output || response.data.error);
+      } else {
+        setOutput('Unexpected response format from backend.');
+      }
     } catch (error) {
-      setOutput('Error compiling code.');
-      console.error(error);
+      console.error('Error during compilation:', error);
+      if (error.response) {
+        setOutput(
+          `Error from server: ${error.response.data?.message || 'Unknown error'}`
+        );
+      } else if (error.request) {
+        setOutput('No response from server. Check your network or backend.');
+      } else {
+        setOutput(`Unexpected error: ${error.message}`);
+      }
     }
   };
 
