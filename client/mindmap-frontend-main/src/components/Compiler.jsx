@@ -18,6 +18,7 @@ const Compiler = () => {
 
   const handleCompile = async () => {
     try {
+      // Debugging log
       console.log('Sending Payload:', {
         clientId,
         clientSecret,
@@ -25,11 +26,11 @@ const Compiler = () => {
         language,
       });
 
+      // Ensure POST request is sent
       const response = await axios.post(`${API_URL}/api/execute`, {
-        clientId: clientId,
-        clientSecret: clientSecret,
         script: code,
         language: language,
+        versionIndex: '0', // Include version index
       });
 
       console.log('Received Response:', response.data);
@@ -51,7 +52,7 @@ const Compiler = () => {
         setOutput(`Unexpected error: ${error.message}`);
       }
     }
-  };
+};
 
   return (
     <div>
