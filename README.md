@@ -1,6 +1,10 @@
 # Mind Map Application 
 
+<<<<<<< HEAD
 The **Mind Map** is a powerful, no-frills tool designed to help competitive programmers, developers, and problem-solvers organize their thoughts, sketch code ideas, and visualize complex problems, without being distracted by looking at different monitors or papers. Whether you're prepping for a coding interview, brainstorming algorithmic solutions, or mapping out the flow of a project or working on code with others, this tool has everything you need to efficiently structure and share your ideas.
+=======
+The **Mind Map** is a powerful, no-frills tool designed to help competitive programmers, developers, and problem-solvers organize their thoughts, sketch code ideas, and visualize complex problems. Whether you're prepping for a coding interview, brainstorming algorithmic solutions, or mapping out the flow of a project, this tool has everything you need to efficiently structure your ideas.
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 
 With **Mind Map**, you can:
 
@@ -9,11 +13,16 @@ With **Mind Map**, you can:
 - **Organize your problems** hierarchically, helping you break down complex problems into smaller, manageable components.
 - **Map out your solutions** step-by-step, connecting concepts and code blocks to ensure clarity and prevent logic gaps.
 - **Collaborate** (Coming Soon!) in real-time, so you can easily share your thoughts and problem-solving approach with teammates or peers.
+<<<<<<< HEAD
+=======
+- **Export** your mind maps for sharing, presenting, or reviewing before the final implementation.
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 
 Ideal for competitive programmers and anyone who thrives on efficiency, clarity, and fast iteration in problem-solving.
 
 ---
 
+<<<<<<< HEAD
 
 ## Key Features of the Platform:
 
@@ -27,6 +36,16 @@ Ideal for competitive programmers and anyone who thrives on efficiency, clarity,
 
 - **Real-Time Collaboration (Coming Soon!)**: Work together with your team on shared projects in real-time, enhancing collaboration and idea-sharing.
 - **User Management (Coming Soon!)**: A database will be implemented for handling user accounts, allowing for a more personalized experience, including user authentication and project management.
+=======
+##  Features
+
+- **Dynamic Node Creation**: Effortlessly add and edit nodes to represent ideas or tasks.
+- **Drag-and-Drop Interface**: Seamlessly rearrange nodes for a clear visual structure.
+- **Customizable Design**: Personalize nodes with colors, shapes, and icons for clarity and organization.
+- **Run Code**: Test and run your code directly within the mind map interface.
+- **Save and Export**: Save your mind maps locally or export them as images or JSON files.
+- **Real-Time Collaboration** (Coming Soon!): Collaborate with your team on shared mind maps.
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 
 ---
 
@@ -38,6 +57,10 @@ Follow these steps to set up and test the application locally. **Note:** Ensure 
 
 - **Node.js** and **npm** installed on your system.
 - **Java** (JDK 17 or later) and **Maven** installed on your system for the Spring Boot backend.
+<<<<<<< HEAD
+=======
+- **PostgreSQL** (or other database of your choice) installed and configured if the backend relies on it.
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 
 ### **Steps to Run Locally**
 
@@ -54,7 +77,11 @@ Follow these steps to set up and test the application locally. **Note:** Ensure 
    cd server/mindmap-backend-main
    ```
 
+<<<<<<< HEAD
    Ensure the `application.properties` or `application.yml` file is correctly set up (e.g. server port, etc.).
+=======
+   Ensure the `application.properties` or `application.yml` file is correctly set up (e.g., database connection details, server port, etc.).
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 
    **Run the Spring Boot Application** as a Java program (via your IDE or command line):
    ```bash
@@ -111,7 +138,11 @@ I am actively working on deploying the Mind Map application remotely so you can 
 
 ## 🛠️ Technologies Used
 
+<<<<<<< HEAD
 - **Frontend**: React.js, custom CSS
+=======
+- **Frontend**: React.js, Tailwind CSS
+>>>>>>> 576df1ecc39f581875d07560128e932a5883505f
 - **Backend**: Spring Boot, Java, Maven
 - **Deployment** (Coming Soon): Hosting on Render and Netlify.
 ---
