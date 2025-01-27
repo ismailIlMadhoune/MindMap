@@ -109,7 +109,7 @@ I am actively working on deploying the Mind Map application remotely so you can 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend**: React.js, custom CSS
 - **Backend**: Spring Boot, Java, Maven
@@ -206,7 +206,7 @@ Ideal for competitive programmers and anyone who thrives on efficiency, clarity,
 
 ---
 
-## 💻 How to Deploy Locally
+##  How to Deploy Locally
 
 Follow these steps to set up and test the application locally. **Note:** Ensure the backend server is running first before starting the frontend. The frontend relies on the backend API to function properly.
 
@@ -285,7 +285,7 @@ I am actively working on deploying the Mind Map application remotely so you can 
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Frontend**: React.js, custom CSS
 - **Backend**: Spring Boot, Java, Maven
