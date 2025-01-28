@@ -9,9 +9,13 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-        .allowedOrigins("*") // Allow all origins temporarily
-        .allowedMethods("*")
-        .allowedHeaders("*")
-        .allowCredentials(true);
+                .allowedOrigins(
+                    "http://localhost:5173",
+                    "https://mind-map-rn.netlify.app",
+                    "https://mindmap-htwn.onrender.com" // Frontend URL
+                )
+                .allowedMethods("*")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
