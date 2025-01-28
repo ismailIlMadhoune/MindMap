@@ -52,7 +52,7 @@ const Compiler = () => {
         setOutput(`Unexpected error: ${error.message}`);
       }
     }
-};
+}; 
 
   return (
     <div>
